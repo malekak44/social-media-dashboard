@@ -3,6 +3,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 33px 0;
+    flex-direction: column;
+
+    @include breakpoint-up(medium) {
+        flex-direction: row;
+    }
 
     &__title {
         h1 {
@@ -18,7 +23,7 @@
     }
 
     &__theme {
-        p{
+        p {
             font-weight: bold;
             font-size: 15px;
             color: var(--small-text);

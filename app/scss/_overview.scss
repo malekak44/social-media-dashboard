@@ -1,0 +1,72 @@
+.overview {
+    margin: 44px auto 70px;
+
+    h1 {
+        color: var(--small-text);
+        font-size: 23px;
+    }
+
+    &__cards {
+        margin: 22px auto;
+        display: block;
+        align-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px 30px;
+
+        @include breakpoint-up(medium) {
+            display: grid;
+        }
+    }
+
+    &__card {
+        background: var(--card-bg);
+        border-radius: 5px;
+        padding: 5px 27px 18px 24px;
+        cursor: pointer;
+
+        .activity,
+        .stat,
+        .stat-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .activity {
+            padding: 20px 0;
+
+            p {
+                font-size: 13.3px;
+                font-weight: bold;
+                color: var(--small-text);
+            }
+
+            img {
+                width: 18px;
+            }
+        }
+
+        .stat {
+
+            h2 {
+                font-size: 30px;
+                color: var(--bold-text);
+            }
+
+            &-label {
+                margin-top: 16px;
+
+                p {
+                    font-size: 11px;
+                    font-weight: bold;
+                    margin-left: 2px;
+                    color: $limeGreen;
+                }
+
+                .red-text {
+                    color: $brightRed;
+                }
+            }
+        }
+    }
+}

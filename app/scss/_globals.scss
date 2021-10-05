@@ -18,7 +18,7 @@ html {
     --top-bg-pattern: hsl(225, 100%, 98%);
     --card-bg: hsl(227, 47%, 96%);
     --small-text: hsl(228, 12%, 44%);
-    --text: hsl(230, 17%, 14%);
+    --bold-text: hsl(230, 17%, 14%);
 }
 
 .light {
@@ -26,7 +26,7 @@ html {
     --top-bg-pattern: hsl(225, 100%, 98%);
     --card-bg: hsl(227, 47%, 96%);
     --small-text: hsl(228, 12%, 44%);
-    --text: hsl(230, 17%, 14%);
+    --bold-text: hsl(230, 17%, 14%);
 }
 
 .dark {
@@ -34,7 +34,7 @@ html {
     --top-bg-pattern: hsl(230, 17%, 14%);
     --card-bg: hsl(228, 28%, 20%);
     --small-text: hsl(228, 34%, 66%);
-    --text: hsl(0, 0%, 100%);
+    --bold-text: hsl(0, 0%, 100%);
 }
 
 body {
@@ -49,6 +49,11 @@ a {
 }
 
 .container {
-    margin: auto;
-    width: 66.5rem;
+    margin: 0 auto;
+    max-width: 65.2rem;
+    padding: 0 2.5rem;
+
+    @include breakpoint-up(medium) {
+        padding: 0;
+    }
 }
