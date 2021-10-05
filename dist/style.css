@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --bg: hsl(0, 0%, 100%);
+  --top-bg-pattern: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --small-text: hsl(228, 12%, 44%);
+  --text: hsl(230, 17%, 14%);
+}
+
+.light {
+  --bg: hsl(0, 0%, 100%);
+  --top-bg-pattern: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --small-text: hsl(228, 12%, 44%);
+  --text: hsl(230, 17%, 14%);
+}
+
+.dark {
+  --bg: hsl(230, 17%, 14%);
+  --top-bg-pattern: hsl(230, 17%, 14%);
+  --card-bg: hsl(228, 28%, 20%);
+  --small-text: hsl(228, 34%, 66%);
+  --text: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+  width: 66.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 0;
+}
+
+.header__title h1 {
+  font-size: 26px;
+}
+
+.header__title p {
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 13.4px;
+  color: var(--small-text);
+}
+
+.header__theme p {
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--small-text);
+}
+
+.overall {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.overall__card {
+  width: 14rem;
+  background: var(--card-bg);
+  border-radius: 4px;
+  border-top: 5px solid lightblue;
+}
+
+.overall__card .username,
+.overall__card .today {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overall__card h1 {
+  font-size: 52px;
+  letter-spacing: -2px;
+}
+
+.overall__card h1 + p {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+/*# sourceMappingURL=style.css.map */

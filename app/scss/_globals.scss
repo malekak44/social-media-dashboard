@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --bg: hsl(0, 0%, 100%);
+    --top-bg-pattern: hsl(225, 100%, 98%);
+    --card-bg: hsl(227, 47%, 96%);
+    --small-text: hsl(228, 12%, 44%);
+    --text: hsl(230, 17%, 14%);
+}
+
+.light {
+    --bg: hsl(0, 0%, 100%);
+    --top-bg-pattern: hsl(225, 100%, 98%);
+    --card-bg: hsl(227, 47%, 96%);
+    --small-text: hsl(228, 12%, 44%);
+    --text: hsl(230, 17%, 14%);
+}
+
+.dark {
+    --bg: hsl(230, 17%, 14%);
+    --top-bg-pattern: hsl(230, 17%, 14%);
+    --card-bg: hsl(228, 28%, 20%);
+    --small-text: hsl(228, 34%, 66%);
+    --text: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: auto;
+    width: 66.5rem;
+}

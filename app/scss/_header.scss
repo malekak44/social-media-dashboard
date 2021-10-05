@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 0;
+
+    &__title {
+        h1 {
+            font-size: 26px;
+        }
+
+        p {
+            margin-top: 4px;
+            font-weight: bold;
+            font-size: 13.4px;
+            color: var(--small-text);
+        }
+    }
+
+    &__theme {
+        p{
+            font-weight: bold;
+            font-size: 15px;
+            color: var(--small-text);
+        }
+    }
+}
