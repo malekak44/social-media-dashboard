@@ -1,32 +1,126 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 33px 0;
-    flex-direction: column;
+    min-height: 230px;
+    padding: 2.1875rem 0;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--top-bg-pattern);
 
     @include breakpoint-up(medium) {
-        flex-direction: row;
+        padding: 2.0625rem 0;
+    }
+
+    .container {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     &__title {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint-up(medium) {
+            margin-bottom: 0;
+        }
+
         h1 {
-            font-size: 26px;
+            font-size: 1.5rem;
+            color: var(--bold-text);
+
+            @include breakpoint-up(medium) {
+                font-size: 1.625rem;
+            }
         }
 
         p {
             margin-top: 4px;
             font-weight: bold;
-            font-size: 13.4px;
+            font-size: 0.9rem;
             color: var(--small-text);
+
+            @include breakpoint-up(medium) {
+                font-size: 0.8375rem;
+            }
         }
     }
 
+
+    hr {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        height: 1px;
+        display: block;
+        border-top: 1px solid #848BAB;
+    }
+
+    @at-root.dark hr {
+        border-top: 1px solid #333A55;
+    }
+
     &__theme {
+        display: flex;
+        cursor: pointer;
+        margin-top: 1rem;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint-up(medium) {
+            margin-top: 0;
+        }
+
         p {
             font-weight: bold;
-            font-size: 15px;
+            margin-right: 1rem;
+            font-size: 0.875rem;
             color: var(--small-text);
+
+            .dark &:hover {
+                color: #fff;
+            }
+        }
+
+        .toggle-btn {
+            width: 3rem;
+            display: flex;
+            height: 1.5rem;
+            transition: unset;
+            border-radius: 12px;
+            align-items: center;
+            background-image: $dark;
+            justify-content: flex-start;
+
+            &.off {
+                background: $light;
+                justify-content: flex-end;
+
+                .circle-btn {
+                    background-color: #fff;
+                }
+            }
+
+            &:hover {
+                background-image: $dark;
+            }
+        }
+
+        .circle-btn {
+            margin: 0 4px;
+            width: 1.125rem;
+            height: 1.125rem;
+            transition: unset;
+            border-radius: 50%;
+            background-color: #252B42;
+        }
+
+        .dark &:hover {
+            p {
+                color: #fff;
+            }
         }
     }
 }

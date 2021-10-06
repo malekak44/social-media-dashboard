@@ -1,25 +1,28 @@
 .overall {
-    display: block;
-    align-items: center;
-    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    margin-top: 9px;
+    display: block;
+    align-items: start;
     text-align: center;
+    grid-template-columns: repeat(4, 1fr);
 
     @include breakpoint-up(medium) {
-    display: grid;
+        display: grid;
     }
 
     &__card {
-        background: var(--card-bg);
-        border-radius: 5px;
         cursor: pointer;
+        border-radius: 5px;
+        background: var(--card-bg);
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
 
         .bar {
             width: 100%;
             height: 4px;
-            border-top-left-radius: 16px;
-            border-top-right-radius: 16px;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
 
             &-facebook {
                 background: $facebook;
@@ -46,45 +49,65 @@
         }
 
         .profile {
-            margin-top: 26px;
+            margin-top: 1.875rem;
+
+            @include breakpoint-up(medium) {
+                margin-top: 1.625rem;
+            }
 
             img {
-                width: 18px;
-                margin-right: 8px;
+                width: 1.25rem;
+                margin-right: 0.5rem;
+
+                @include breakpoint-up(medium) {
+                    width: 1.125rem;
+                }
             }
 
             p {
-                font-size: 12px;
                 font-weight: bold;
+                font-size: 0.75rem;
                 color: var(--small-text);
             }
         }
 
         h1 {
-            font-size: 53px;
+            font-size: 3.5rem;
+            margin-top: 1.125rem;
             letter-spacing: -2px;
-            margin-top: 18px;
             color: var(--bold-text);
+
+            @include breakpoint-up(medium) {
+                font-size: 3.3125rem;
+            }
         }
 
         h1+p {
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 4px;
+            font-size: 0.75rem;
+            letter-spacing: 5px;
             color: var(--small-text);
+            text-transform: uppercase;
+
+            @include breakpoint-up(medium) {
+                letter-spacing: 4px;
+            }
         }
 
         .stat {
-            padding: 22px 0;
+            padding: 1.5rem 0;
+
+            @include breakpoint-up(medium) {
+                padding: 1.375rem 0;
+            }
 
             img {
                 margin-right: 5px;
             }
 
             p {
-                font-size: 12px;
-                font-weight: bold;
                 color: $limeGreen;
+                font-weight: bold;
+                font-size: 0.75rem;
             }
         }
     }

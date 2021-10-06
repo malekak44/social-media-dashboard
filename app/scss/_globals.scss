@@ -11,6 +11,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    transition: all 0.3s ease-in-out;
 }
 
 :root {
@@ -41,6 +42,7 @@ body {
     margin: 0;
     padding: 0;
     background: var(--bg);
+    transition: all 0.5s ease-in-out;
     font-family: 'Inter', sans-serif;
 }
 
@@ -50,10 +52,28 @@ a {
 
 .container {
     margin: 0 auto;
+    padding: 0 1.5rem;
     max-width: 65.2rem;
-    padding: 0 2.5rem;
 
     @include breakpoint-up(medium) {
         padding: 0;
     }
+}
+
+main {
+    transform: translateY(-2.5rem);
+
+    @include breakpoint-up(medium) {
+        transform: translateY(-6.5rem);
+    }
+}
+
+.overall__card:hover,
+.overview__card:hover {
+    background-color: #E1E4F0;
+}
+
+.dark .overall__card:hover,
+.dark .overview__card:hover {
+    background-color: #333A55;
 }
